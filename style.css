@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Happy Monkey", system-ui;
+    background: linear-gradient(#0e86c7, #de447c);
+}
+
+:root {
+    --round: 360%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#nicks_image {
+    width: 15%;
+    border-radius: var(--round);
+    border: 6px solid #d81159;
+    position: relative;
+    z-index: 1;
+}
+
+#nicks_image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--round);
+    /* Ajusta el radio del borde */
+    padding: 5px;
+    /* Ajusta el grosor del borde */
+    background: linear-gradient(45deg, red, blue);
+    /* El degradado del borde */
+    z-index: -1;
+}
+
+#nicks_image::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: var(--round);
+    /* Coincide con el radio del borde */
+    background-color: white;
+    /* Fondo del elemento */
+    z-index: 0;
+}
+
+#main_title {
+    font-size: 3rem;
+}
+
+.text_color {
+    color: #e09f3e;
+    text-shadow: 2px 2px 3px black;
+}
+
+.bd-text {
+    background-color: #d81159;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 6px 1px black;
+    margin-bottom: -5px;
+}
+
+.gift_cover {
+    border: 8px solid white;
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.firstGift {
+    background-image: url("./images/gift-cover.jpg");
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.firstGift:hover {
+    background-image: url("./images/happy.gif");
+    background-size: cover;
+}
+
+.secondGift {
+    background-image: url("./images/gift-cover.jpg");
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.secondGift:hover {
+    background-image: url("./images/hot.gif");
+    background-size: cover;
+}
+
+.thirdGift {
+    background-image: url("./images/gift-cover.jpg");
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.thirdGift:hover {
+    background-image: url("./images/genius.gif");
+    background-size: cover;
+}
+
+.fourGift {
+    background-image: url("./images/gift-cover.jpg");
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.fourGift:hover {
+    background-image: url("./images/badass.gif");
+    background-size: cover;
+}
+
+.lastGift {
+    background-image: url("./images/gift-cover.jpg");
+    background-size: cover;
+    height: 200px;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.lastGift:hover {
+    background-image: url("./images/cheers.gif");
+    background-size: cover;
+}
+
+.gift_container {
+    margin-top: 40px;
+}
+
+.gift-text {
+    margin-bottom: -20px;
+}
+
+#footer_text {
+    font-style: italic;
+    color: white;
+    font-weight: bolder;
+    text-shadow: 2px 2px 3px black;
+    width: 600px;
+    text-align: center;
+}
+
+#footer_text>a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    background: #e09f3e;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 1px black;
+    padding: 10px;
+    line-height: 90px;
+    text-align: center;
+}
+
+#footer_text>a:hover {
+    background: linear-gradient(#e09f3e, #006ba6);
+}
